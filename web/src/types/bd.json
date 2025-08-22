@@ -1,0 +1,42 @@
+{
+  "categorias": [
+    {
+      "id": "1",
+      "nome": "Respiratório",
+      "sintomas": ["1", "2", "3"],
+      "ativo": true
+    },
+    {
+      "id": "2",
+      "nome": "Cardíaco",
+      "sintomas": ["4", "5"],
+      "ativo": true
+    }
+  ],
+  "sintomas": [
+    { "id": "1", "nome": "Tosse", "ativo": true },
+    { "id": "2", "nome": "Falta de ar", "ativo": true },
+    { "id": "3", "nome": "Chiado no peito", "ativo": true },
+    { "id": "4", "nome": "Dor no peito", "ativo": true },
+    { "id": "5", "nome": "Palpitações", "ativo": true }
+  ],
+  "doencas": [
+    {
+      "id": "1",
+      "nome": "Asma",
+      "cid": "",
+      "descricao": "Ceratocone é uma doença degenerativa da córnea, em que ela afina e se projeta para frente em forma de cone, causando distorções visuais. Costuma surgir na adolescência e evolui de forma progressiva.",
+      "sintomas": ["1", "2", "3"],
+      "ativo": true
+    },
+    {
+      "id": "2",
+      "cid": "",
+      "descricao": "Ceratocone é uma doença degenerativa da córnea, em que ela afina e se projeta para frente em forma de cone, causando distorções visuais. Costuma surgir na adolescência e evolui de forma progressiva.",
+
+      "nome": "Infarto Agudo do Miocárdio",
+      "sintomas": ["4", "5"],
+      "ativo": true
+    }
+  ]
+}

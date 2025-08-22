@@ -1,0 +1,27 @@
+@import "tailwindcss";
+:root {
+  --background-color: #070d1c;
+}
+body {
+  margin: 0;
+  padding: 0;
+  /* background: var(--background-color); */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #898989;
+}
+
+.hide-scrollbar {
+  overflow-x: auto;
+  -ms-overflow-style: none; /* Internet Explorer e Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari e Opera */
+}
