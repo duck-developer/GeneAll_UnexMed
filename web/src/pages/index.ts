@@ -4,7 +4,7 @@ import DoencaDetalhe from "./DoencaDetalhe";
 
 /////////////////////
 import Home from "./Home";
-import CategoryPage from "./CategoryPage";
+import CategoryPage from "./CategoryPage/CategoryPage";
 import SintomasPage from "./SintomasPage";
 import DoencaPage from "./DoencaPage";
 import LoginPage from "./LoginPage";

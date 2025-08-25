@@ -4,7 +4,7 @@ import { Doenças, Home, Sintomas, DoencaDetalhe, LoginPage } from "./pages";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LoginPage />,
+    element: <Home />,
   },
   {
     path: "/doenças",

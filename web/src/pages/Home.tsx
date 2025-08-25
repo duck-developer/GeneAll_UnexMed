@@ -8,7 +8,7 @@ import { useState } from "react";
 import { MdSick } from "react-icons/md";
 import { FaViruses } from "react-icons/fa";
 import { LuBlocks } from "react-icons/lu";
-import CategoryPage from "./CategoryPage";
+import CategoryPage from "./CategoryPage/CategoryPage";
 import SintomasPage from "./SintomasPage";
 import DoencaPage from "./DoencaPage";
 
