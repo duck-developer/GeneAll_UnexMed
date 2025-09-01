@@ -160,10 +160,26 @@ const initialValue = {
     {
       id: "1",
       nome: "Asma",
-      cid: "CID-10: H18.6",
+      cid: "CID-10: J45",
       descricao:
-        "Ceratocone é uma doença degenerativa da córnea, em que ela afina e se projeta para frente em forma de cone, causando distorções visuais. Costuma surgir na adolescência e evolui de forma progressiva.",
-
+        "Asma é uma doença inflamatória crônica das vias aéreas que causa tosse, chiado no peito e falta de ar. Os sintomas variam em intensidade e frequência, podendo ser desencadeados por alérgenos, exercício físico ou infecções.",
+      diagnostico: [
+        "História clínica com episódios recorrentes de tosse, chiado e falta de ar",
+        "Sintomas que pioram à noite ou com exposição a gatilhos (poeira, exercício, frio)",
+        "Espirometria mostrando obstrução reversível após broncodilatador",
+      ],
+      tratamento: [
+        "Broncodilatadores de resgate para crises",
+        "Corticoides inalatórios para controle contínuo",
+        "Evitar fatores desencadeantes (poeira, fumaça, ácaros)",
+        "Plano de ação individualizado e acompanhamento médico",
+      ],
+      exames: [
+        "Espirometria: avalia função pulmonar e resposta ao broncodilatador",
+        "Peak flow: mede variação da obstrução em casa",
+        "Testes alérgicos: identificam gatilhos",
+        "Radiografia de tórax: descarta outras doenças",
+      ],
       sintomas: ["1", "2", "3"],
       ativo: true,
     },
@@ -172,12 +188,30 @@ const initialValue = {
       nome: "Ceratocone",
       cid: "CID-10: H18.6",
       descricao:
-        "Ceratocone é uma doença ocular progressiva caracterizada pelo afinamento e deformação da córnea, que adquire uma forma de cone, em vez de sua curvatura normal arredondada. Essa alteração causa distúrbios refrativos significativos, como astigmatismo irregular e miopia, levando à baixa acuidade visual que não melhora completamente com óculos comuns.",
-
+        "Ceratocone é uma doença ocular progressiva caracterizada pelo afinamento e deformação da córnea, que passa a ter formato de cone. Isso provoca astigmatismo irregular, miopia e visão distorcida, que não melhora totalmente com óculos.",
+      diagnostico: [
+        "História de visão borrada ou distorcida que não melhora com óculos",
+        "Topografia corneana mostrando curvatura irregular típica de cone",
+        "Tomografia corneana evidenciando alterações de elevação e espessura",
+        "Paquimetria mostrando afinamento corneano progressivo",
+      ],
+      tratamento: [
+        "Óculos ou lentes rígidas nos estágios iniciais",
+        "Crosslinking corneano para estabilizar a progressão",
+        "Anel intracorneano em casos moderados",
+        "Transplante de córnea em estágios avançados",
+      ],
+      exames: [
+        "Topografia corneana: avalia curvatura da córnea",
+        "Tomografia corneana: avalia elevação e espessura",
+        "Paquimetria: mede a espessura da córnea",
+        "Acuidade visual: quantifica a perda de visão",
+      ],
       sintomas: ["6", "13", "14", "15", "16"],
       ativo: true,
     },
   ],
+
   setDoencas: () => {},
 
   selected: [],

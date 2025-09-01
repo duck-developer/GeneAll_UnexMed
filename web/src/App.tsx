@@ -1,22 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Doenças, Home, Sintomas, DoencaDetalhe, LoginPage } from "./pages";
+import { Home, LoginPage } from "./pages";
+import Private from "./routes/private";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <LoginPage />,
   },
   {
-    path: "/doenças",
-    element: <Doenças />,
-  },
-  {
-    path: "/doenças/:id",
-    element: <DoencaDetalhe />,
-  },
-  {
-    path: "/sintomas",
-    element: <Sintomas />,
+    path: "/home",
+    element: (
+      <Private>
+        <Home />
+      </Private>
+    ),
   },
 ]);
 

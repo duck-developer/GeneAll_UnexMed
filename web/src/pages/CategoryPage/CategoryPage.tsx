@@ -5,7 +5,7 @@ import { useContext, useState } from "react";
 import CatedoryPageDetails from "./CatedoryPageDetails";
 
 const CategoryPage = () => {
-  const { categorias, setCategorias } = useContext(Context);
+  const { categorias, setCategorias, sintomas } = useContext(Context);
 
   const [activeDetails, setActiveDetails] = useState(false);
   const [categoryDetails, setCategoryDetails] = useState<Categoria | null>();
@@ -42,7 +42,14 @@ const CategoryPage = () => {
               } px-6 py-2 rounded-md cursor-pointer`}
             >
               <h1>{item.nome}</h1>
-              <h1>Total de sintomas: {item.sintomas.length}</h1>
+              <h1>
+                Total de sintomas:{" "}
+                {
+                  sintomas.filter(
+                    (s) => item.sintomas.includes(s.id) && s.ativo
+                  ).length
+                }
+              </h1>
               <div className=" my-2 w-0" onClick={(e) => e.stopPropagation()}>
                 <SwitchToggleUi
                   boolean={item.ativo}

@@ -4,7 +4,7 @@ interface Props {
   icon: React.ElementType;
   color?: string;
   size?: number;
-  active: boolean;
+  active?: boolean;
   className?: string;
 }
 const IconsUi = ({ icon: Icon, size, active, color, className }: Props) => {
