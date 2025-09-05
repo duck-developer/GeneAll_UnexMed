@@ -3,20 +3,15 @@ import { Context } from "@/context/Context";
 import type { Categoria } from "@/types/type";
 import { useContext, useState } from "react";
 import CatedoryPageDetails from "./CatedoryPageDetails";
+import useCategory from "./utils/useCategory";
 
 const CategoryPage = () => {
-  const { categorias, setCategorias, sintomas } = useContext(Context);
+  const { categorias, sintomas } = useContext(Context);
+
+  const { ToggleDetailsCategorias } = useCategory();
 
   const [activeDetails, setActiveDetails] = useState(false);
   const [categoryDetails, setCategoryDetails] = useState<Categoria | null>();
-
-  function update(item: Categoria, state: boolean) {
-    setCategorias((prevCategorias: Categoria[]) =>
-      prevCategorias.map((cat: Categoria) =>
-        cat.id === item.id ? { ...cat, ativo: state } : cat
-      )
-    );
-  }
 
   function ToggleDetails(item?: Categoria) {
     if (activeDetails) {
@@ -29,7 +24,7 @@ const CategoryPage = () => {
   }
   return (
     <>
-      <div className="bg-[#070d1c] h-[100%] absolute px-4 py-4 text-white">
+      <div className="bg-[#070d1c] h-[100%] absolute  px-4 py-4 text-white">
         <div className=" flex  flex-wrap gap-4 ">
           {categorias.map((item) => (
             <div
@@ -53,7 +48,7 @@ const CategoryPage = () => {
               <div className=" my-2 w-0" onClick={(e) => e.stopPropagation()}>
                 <SwitchToggleUi
                   boolean={item.ativo}
-                  onToggle={(state) => update(item, state)}
+                  onToggle={() => ToggleDetailsCategorias(item)}
                 />
               </div>
             </div>

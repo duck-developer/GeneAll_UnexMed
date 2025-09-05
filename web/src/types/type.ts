@@ -12,11 +12,14 @@ export type Categoria = {
 };
 
 export type Doenca = {
-  id: string;
+  id?: string;
   nome: string;
   cid: string;
   descricao: string;
   sintomas: string[];
+  diagnostico: string[];
+  tratamento: string[];
+  exames: string[];
   ativo: boolean;
 };
 

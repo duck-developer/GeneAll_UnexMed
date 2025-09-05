@@ -3,6 +3,7 @@ import { Context } from "@/context/Context";
 import type { Categoria } from "@/types/type";
 import { useContext, useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
+import useCategory from "./utils/useCategory";
 
 interface CatedoryPageDetailsProps {
   ToggleDetailsProps: () => void;
@@ -13,6 +14,7 @@ const CatedoryPageDetails = ({
   categoryDetailsProps,
 }: CatedoryPageDetailsProps) => {
   const { sintomas } = useContext(Context);
+  const { updateCategory } = useCategory();
 
   // Estado local com sintomas selecionados
   const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([]);
@@ -99,9 +101,12 @@ const CatedoryPageDetails = ({
 
         {/* Botão salvar */}
         <button
-          onClick={() => {
-            console.log("Sintomas selecionados:", selectedSymptoms);
-            // ToggleDetailsProps();
+          onClick={async () => {
+            if (!categoryDetailsProps?.id) return;
+            await updateCategory(categoryDetailsProps.id, selectedSymptoms);
+
+            // Fecha modal
+            ToggleDetailsProps();
           }}
           className="mt-6 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg cursor-pointer"
         >
