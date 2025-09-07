@@ -32,11 +32,11 @@ Gerenciador de Doenças Raras é uma plataforma voltada para profissionais de sa
 ### Mobile
 
 <p align="left">
-<img src="./readme/mobile/image 1.jpeg" alt="@duck_mobile" height="200">
-<img src="./readme/mobile/image 2.jpeg" alt="@duck_mobile" height="200">
-<img src="./readme/mobile/image 3.jpeg" alt="@duck_mobile" height="200">
-<img src="./readme/mobile/image 4.jpeg" alt="@duck_mobile" height="200">
-<img src="./readme/mobile/image 5.jpeg" alt="@duck_mobile" height="200">
+<img src="./readme/mobile/image 1.jpeg" alt="@duck_mobile" height="400">
+<img src="./readme/mobile/image 2.jpeg" alt="@duck_mobile" height="400">
+<img src="./readme/mobile/image 3.jpeg" alt="@duck_mobile" height="400">
+<img src="./readme/mobile/image 4.jpeg" alt="@duck_mobile" height="400">
+<img src="./readme/mobile/image 5.jpeg" alt="@duck_mobile" height="400">
 </p>
 
 ---
