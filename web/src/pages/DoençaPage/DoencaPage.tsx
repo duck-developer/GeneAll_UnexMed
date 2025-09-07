@@ -101,6 +101,7 @@ const DoencaPage = () => {
   return (
     <>
       {/* Lista de doenças */}
+
       <div className="bg-[#070d1c] min-h-screen w-full px-4 py-4 text-white">
         <div className="flex justify-end pr-10">
           <button
@@ -211,13 +212,13 @@ const DoencaPage = () => {
               <div className="flex justify-end gap-2">
                 <button
                   onClick={fecharFormulario}
-                  className="px-4 py-2 bg-gray-500 rounded-lg hover:bg-gray-600"
+                  className="px-4 py-2 bg-gray-500 rounded-lg hover:bg-gray-600 cursor-pointer"
                 >
                   Cancelar
                 </button>
                 <button
                   onClick={salvarDoenca}
-                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg"
+                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg cursor-pointer"
                 >
                   {editandoDoenca ? "Salvar Alterações" : "Salvar"}
                 </button>

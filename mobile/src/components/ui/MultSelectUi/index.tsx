@@ -4,20 +4,12 @@ import { MultiSelect } from "react-native-element-dropdown";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import styles from "./styles";
 import { Context } from "@/src/context/Context";
-const MultiSelectUi = () => {
-  const [selected, setSelected] = useState<string[]>([]);
 
-  const { sintomas } = useContext(Context);
-  const data = [
-    { label: "Item 1", value: "1" },
-    { label: "Item 2", value: "2" },
-    { label: "Item 3", value: "3" },
-    { label: "Item 4", value: "4" },
-    { label: "Item 5", value: "5" },
-    { label: "Item 6", value: "6" },
-    { label: "Item 7", value: "7" },
-    { label: "Item 8", value: "8" },
-  ];
+const MultiSelectUi = () => {
+  const { sintomas, selected, setSelected } = useContext(Context);
+
+  const selectedIds = selected.map((s) => s.id); // apenas ids para o dropdown
+
   return (
     <View style={styles.container}>
       <MultiSelect
@@ -32,9 +24,10 @@ const MultiSelectUi = () => {
         valueField="id"
         placeholder="Selecione um Sintoma"
         searchPlaceholder="Buscar..."
-        value={selected}
-        onChange={(item) => {
-          setSelected(item);
+        value={selectedIds}
+        onChange={(itemIds) => {
+          const selectedItems = sintomas.filter((s) => itemIds.includes(s.id));
+          setSelected(selectedItems);
         }}
         renderLeftIcon={() => (
           <AntDesign

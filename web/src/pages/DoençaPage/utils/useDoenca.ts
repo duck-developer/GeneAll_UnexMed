@@ -63,6 +63,7 @@ const useDoenca = () => {
     await updateDoc(ref, dados);
     await getAllDoencas();
   };
+
   return {
     doencas,
     getAllDoencas,
