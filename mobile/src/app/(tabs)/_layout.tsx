@@ -28,22 +28,6 @@ export default function TabLayout() {
               style={{ marginBottom: -10 }}
             />
           ),
-
-          // headerRight: () => (
-          //   <Link href="/modal" asChild>
-          //     <Pressable>
-          //       {({ pressed }) => (
-          //         <IconUi
-          //           type="fa"
-          //           name="info-circle"
-          //           size={25}
-          //           color={"red"}
-          //           style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-          //         />
-          //       )}
-          //     </Pressable>
-          //   </Link>
-          // ),
         }}
       />
       <Tabs.Screen

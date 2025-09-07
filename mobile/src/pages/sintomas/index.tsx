@@ -188,7 +188,7 @@ const SintomasPage = () => {
                     marginBottom: 10,
                   }}
                 >
-                  {doenca.id}
+                  {doenca.nome}
                 </Text>
                 <Text style={{ color: "#A0AEC0", marginBottom: 20 }}>
                   CID: {doenca.cid}
@@ -241,48 +241,6 @@ const SintomasPage = () => {
                     ))}
                   </View>
                 ))}
-
-                {/* {[
-                  { title: "Descrição", data: [doenca.descricao] },
-                  { title: "Sintomas", data: doenca.sintomas },
-                  { title: "Diagnóstico", data: doenca.diagnostico },
-                  { title: "Tratamento", data: doenca.tratamento },
-                  { title: "Exames", data: doenca.exames },
-                ].map((section, idx) => (
-                  <View
-                    key={idx}
-                    style={{
-                      backgroundColor: "#1E293B",
-                      padding: 15,
-                      borderRadius: 12,
-                      marginBottom: 15,
-                      shadowColor: "#000",
-                      shadowOffset: { width: 0, height: 2 },
-                      shadowOpacity: 0.2,
-                      shadowRadius: 3,
-                      elevation: 3,
-                    }}
-                  >
-                    <Text
-                      style={{
-                        color: "#32A2AA",
-                        fontWeight: "bold",
-                        fontSize: 16,
-                        marginBottom: 8,
-                      }}
-                    >
-                      {section.title}
-                    </Text>
-                    {section.data.map((item, i) => (
-                      <Text
-                        key={i}
-                        style={{ color: "#E2E8F0", marginBottom: 4 }}
-                      >
-                        - {item}
-                      </Text>
-                    ))}
-                  </View>
-                ))} */}
               </ScrollView>
             );
           })()}
